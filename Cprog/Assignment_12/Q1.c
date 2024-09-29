@@ -27,8 +27,6 @@ void ArraySort ();
 
 
 
-
-
 int main()
 {
     MaxMin();
@@ -70,13 +68,12 @@ int main()
 
 void MaxMin()
 {
-    int  size, max, min;
-    
-    
+    int  size, max, min;  
      
      printf("Enter the Array size \n");
      scanf("%d",&size);
-     int arr[size]  ;
+     int* arr  ;
+     arr=(int*)malloc(size*sizeof(int));
 
 
 
@@ -109,28 +106,32 @@ void MaxMin()
 
 // Q2 ) 2. Search the given number in array
 
-int SearchNum(int num)
-{
-    int arr[6];
+int  SearchNum(int num)
+{     
+    int * ptr,size;
+    printf("Enter the Array size \n");
+     scanf("%d",&size);
+    ptr = (int*)malloc(size * sizeof(int));
     int i;
     for (i = 0; i <= 5; i++)
     {
-        scanf("%d", &arr[i]);
+        scanf("%d",&ptr[i]);
     }
     for (i = 0; i <= 5; i++)
     {
-        printf(" %d ", arr[i]);
+        printf(" %d ", ptr[i]);
     }
 
     for (i = 0; i <= 5; i++)
     {
-        if (num == arr[i])
+        if (num == ptr[i])
         {
             printf("\n Given No. is %d Found ", num);
             return 0;
         }
     }
     printf("\nGiven No. %d Not Found ", num);
+    return 0;
 }
 
 // Q3 ) 3. Find sum of all numbers.
@@ -138,10 +139,17 @@ int SearchNum(int num)
 int SumOfDigit()
 {
     int i, sum = 0;
-    int arr1[5] = {1, 2, 3, 4, 5};
+      int * ptr,size;
+    printf("Enter the Array size \n");
+     scanf("%d",&size);
+    ptr = (int*)malloc(size * sizeof(int));
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&ptr[i]);
+    }
     for (i = 0; i < 5; i++)
     {
-        sum = sum + arr1[i];
+        sum = sum + ptr[i];
     }
     // printf(" Addition is each Element = %d \n",sum);
     return sum;
@@ -151,22 +159,30 @@ int SumOfDigit()
 void EvnOddInArray()
 {
     int i;
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      int * ptr,size;
+    printf("Enter the Array size \n");
+     scanf("%d",&size);
+    ptr = (int*)malloc(size * sizeof(int));
+        printf("Enter the Array Element For Checking Evn or Odd \n");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&ptr[i]);
+    }
     printf("Evn No Are ");
     for (i = 0; i <= 11; i++)
     {
-        if (arr[i] % 2 == 0)
+        if (ptr[i] % 2 == 0)
         {
-            printf("%d ", arr[i]);
+            printf("%d ", ptr[i]);
         }
     }
     printf("\nOdd No. Are ");
 
     for (i = 0; i <= 11; i++)
     {
-        if (arr[i] % 2 != 0)
+        if (ptr[i] % 2 != 0)
         {
-            printf("%d ", arr[i]);
+            printf("%d ",ptr[i]);
         }
     }
 }
@@ -175,11 +191,19 @@ void EvnOddInArray()
 void AlterNo()
 {
     int i;
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    printf("Alternate No. Are  ");
-    for (i = 0; i < 10; i ++)
+      int * ptr,size;
+    printf("Enter the Array size \n");
+     scanf("%d",&size);
+    ptr = (int*)malloc(size * sizeof(int));
+    printf("Enter the Array Element For Alterning No.\n");
+    for(int i=0;i<size;i++)
     {
-        printf("%d ", arr[i]);        
+        scanf("%d",&ptr[i]);
+    }
+    printf("Alternate No. Are  ");
+    for (i = 0; i <size; i ++)
+    {
+        printf("%d ",ptr[i]);        
         i=i+1;
     }
 }
@@ -190,21 +214,29 @@ void PrimeNosArray ()
 {
 // float avg ,sum=0 ;
 int j, i;
-int arr [5]= { 23,4,13,11,77};
+  int * ptr,size;
+    printf("Enter the Array size \n");
+     scanf("%d",&size);
+    ptr = (int*)malloc(size * sizeof(int));
+        printf("Enter the Array Element For Prime No. Or Not \n");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&ptr[i]);
+    }
 printf("\nPrime No . Are ");
 
-for( i=0 ; i<5 ; i++)
+for( i=0;i<size;i++)
 {
 int flag=0;
-for (j=2 ; j<arr[i];j++ )
+for (j=2 ; j<ptr[i];j++)
 {
- if(arr[i]%j==0)
+ if(ptr[i]%j==0)
  {
  flag++;
 }
 }
 if(flag==0){
-printf("%d ",arr[i]);
+printf("%d ",ptr[i]);
 }
 }
 }
@@ -213,15 +245,33 @@ printf("%d ",arr[i]);
 void ArrAdd ()
 {
 int i,j ;
-int arr1 [5]= { 1,2,3,4,5};
-int arr2 [5]= { 9,8,7,6,5};
-int arr3[5];
-printf("Addition is Are ");
+  int * ptr1;
+  int* ptr2;
+  int* ptr3;
+  int size;
+    printf("Enter the Array size \n");
+     scanf("%d",&size);
+    ptr1 = (int*)malloc(size * sizeof(int));
+    ptr2 = (int*)malloc(size * sizeof(int));
+    ptr3 = (int*)malloc(size * sizeof(int));
 
-for(i=0;i<5;i++)
+    printf("Enter the Array Element ptr1 :\n");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&ptr1[i]);
+    }
+    printf("Enter the Array Element ptr2 :\n");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&ptr2[i]);
+    }
+   
+printf("Addition is Are ptr3 = ptr1 + ptr2 \n");
+
+for(i=0;i<size;i++)
 {
-arr3[i] = arr2[i]+arr1[i];
-printf("%d ",arr3[i]);
+ptr3[i] = ptr1[i]+ptr2[i];
+printf("%d ",ptr3[i]);
 }
 }
 
@@ -231,25 +281,42 @@ printf("%d ",arr3[i]);
 void MergeArray()
 {
 int i , j;
-int arr1 [4]= { 1,2,3,4};
-int arr2 [6]= { 5,6,7,8,9,10,};
-int arr3 [10];
+ int * ptr1;
+  int* ptr2;
+  int* ptr3;
+  int size;
+    printf("Enter the Array size \n");
+     scanf("%d",&size);
+    ptr1 = (int*)malloc(size * sizeof(int));
+    ptr2 = (int*)malloc(size * sizeof(int));
+    ptr3 = (int*)malloc(size * sizeof(int));
+
+    printf("Enter the Array Element ptr1 :\n");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&ptr1[i]);
+    }
+    printf("Enter the Array Element ptr2 :\n");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&ptr2[i]);
+    }
 printf("Array After Merge :  ");
-for (i=0;i<4;i++ )
+for (i=0;i<size;i++ )
 {
- arr3[i] = arr1[i] ; // + arr2[i] ;
+ ptr3[i] = ptr1[i] ; // + arr2[i] ;
 // printf(" Arry 3 = %d", arr3[i]) ;
 }
-for (j=0;j<=6;j++,i++)
+for (j=0;j<=size;j++,i++)
 {
- arr3[i] = arr2[j];
+ ptr3[i] = ptr2[j];
  // printf(" Arry 3 = %d", arr3[i]) ;
  }
 
- for (i=0;i<=9;i++ )
-{
- printf(" %d ", arr3[i]) ;
- }
+   for (i=0;i<=size;i++ )
+   { 
+    printf(" %d ",ptr3[i]) ;
+   }
  }
 
 // Q9) 9. Reverse the given array.

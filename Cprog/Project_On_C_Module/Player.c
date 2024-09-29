@@ -20,9 +20,12 @@ typedef struct Player
 
 } Player;
 
-Player AddPlayer(Player *b, int* size, int* NoOfBook)
+ int NoOfBook = 0;
+
+
+Player AddPlayer(Player *b, int* size)
 {
-    for (int i = 0; i < &NoOfBook; i++)
+    for (int i = 0; i < NoOfBook; i++)
     {
         printf("Provide %d Player Id\n", i + 1);
         scanf("%d", &b[i].Jersey_No);
@@ -42,9 +45,9 @@ Player AddPlayer(Player *b, int* size, int* NoOfBook)
     }
 }
 
-Player Disp(Player *b, int size,int * NoOfBook)
+Player Disp(Player *b, int size)
 {
-    for (int i =&NoOfBook; i < size; i++)
+    for (int i =NoOfBook; i < size; i++)
     {
         // printf("Provide %d Player Id\n",i);
         printf("Player ID Is : %d\n", b[i].Jersey_No);
@@ -73,28 +76,30 @@ int menu()
     return choice;
 }
 
+
 int main()
 {
 
     int size=2 ;
     Player b[size];
+    
+
 
     int ch;
     do
     {
         ch = menu();
-        int NoOfBook = 0;
         switch (ch)
         {
         case 1:
             printf(" Enter The Nos Of Player You Want Add \n");
             scanf("%d", &size);
-            AddPlayer(b, size,NoOfBook);
+            AddPlayer(b, size);
             printf("\n");
             break;
 
         case 2:
-            Disp(b, size,NoOfBook);
+            Disp(b, size);
             break;
        
         default:
