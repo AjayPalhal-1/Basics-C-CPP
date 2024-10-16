@@ -78,7 +78,7 @@ float getHeight()
 int main ()
 {
     shape S1 ;  
-   cout << S1.CalArea(10,10);
+ cout << S1.CalArea(10,10);
  cout << S1.CalArea(10);
  float PI=3.14;
  cout << S1.CalArea(10 , PI);

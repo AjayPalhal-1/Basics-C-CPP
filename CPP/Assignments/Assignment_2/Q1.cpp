@@ -1,3 +1,10 @@
+// Assignment 2
+// Function Overloading
+
+// 1. Write a functions to add 2 int value, 2 float value, 1 int and 1 float value and vice
+// versa . similary write functions for all other arithmetic operations.
+
+
 #include<stdio.h>
 #include<iostream>
 using namespace std;
@@ -72,7 +79,7 @@ int main()
 cout << "\nAddtion Float + Float : " << F1.Add(a,b);
 cout<< "\nAddition int + int : "<< F1.Add(c,b);
 cout<< "\nAddition int + Float : " <<F1.Add(c,d);
-cout<< "\nAddition Float + int  : \n\n" <<F1.Add(d,c);
+cout<< "\nAddition Float + int  : " <<F1.Add(b,c)<< endl;
 
 
 
