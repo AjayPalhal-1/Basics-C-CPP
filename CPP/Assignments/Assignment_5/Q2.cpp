@@ -32,7 +32,7 @@ class Shape
      }
 
     //  CalculateArea: Calculates and sets the area based on the shape.
-    void CalculateArea()
+    virtual void CalculateArea()
     {
         cout<<"Area Of Shape : "<<this->Area<<endl;
     }
