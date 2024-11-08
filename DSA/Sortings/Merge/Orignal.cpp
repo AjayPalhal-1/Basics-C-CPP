@@ -7,9 +7,9 @@ void merge (int* ,int   , int  ,int   );
 
 int main ()
 {
-    int size =6;
+    int size =3;
 
-    int arr [size]={25,12,85,99,2,87};
+    int arr [size]={25,12,85};
     int start= 0;
     int end =size-1;
 

@@ -92,9 +92,7 @@ typedef struct student
 
 
     void disp(student s)
-{
-
-    printf("Student Name : %s\n",this->name);
+{    printf("Student Name : %s\n",this->name);
     printf("Student Roll No : %d\n",this->rollN0);
     printf("Student Marks : %d\n\n\n",this->marks);
 
@@ -142,10 +140,7 @@ int main ()
     printf(":** Displays Behaviour After Setting values Of S3 :**\n");
     s3.disp(s3);
 
-
-
-
-
+    s4.disp(s4);
 
     return 1;
 }

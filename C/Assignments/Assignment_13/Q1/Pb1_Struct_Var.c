@@ -29,21 +29,25 @@ typedef struct student
     char Name [32];
     int RollNo ;
     int Marks ;
+
 }student;
 
-void  Disp (student * );
-void store (student *  ); 
+void  display (student *);
+void store (student * ); 
 
 int main ()
 {
 
     student s1, s2,s3 ;
-     store (&s1);
+    store (&s1);
+    printf("\n\n\n");
     display (&s1);
 }
 
  void store (student * s)
  {  
+        printf("\nEnter Name Student Detail to store  :\n");
+
     printf("\nEnter Name Student :\n");
     scanf("%s",s->Name);
     printf("Student Roll No :\n");
@@ -53,10 +57,25 @@ int main ()
 
   }
 
-  void  display (student * s)
-  {
+//   void  display (student * s)
+//   {
    
     
+//      printf("Student Name is: %s\n",s->Name);
+//      printf("Student Roll No is: %d\n",s->RollNo);
+//      printf("Student Marks  is: %d \n\n\n",s->Marks);
+    
+    
+
+//     // printf("Sizze of student array s1 = %d",sizeof(student));
+// }
+
+  void  display (student*  s)
+  {
+    
+   
+    printf("\nDiplaing  Student Detail   :\n");
+
      printf("Student Name is: %s\n",s->Name);
      printf("Student Roll No is: %d\n",s->RollNo);
      printf("Student Marks  is: %d \n\n\n",s->Marks);

@@ -7,13 +7,13 @@ int main ()
     int size =5;
     int arr[size]= {3,1,7,2,9}; // pass = 4 pass // intreation
      
-    for(int i=1;i<5;i++)
+    for(int i=1;i<size;i++)
     {   
-      int min= arr[i];
+      int current= arr[i];
       int j=i-1;
       for(;j>=0;j--)
       {
-        if(arr[j]>min)
+        if(j<=0 && arr[j]>current)
         {
              arr[j+1]=arr[j];
          }
@@ -21,7 +21,7 @@ int main ()
             break;
 
       }
-      arr[j+1]=min; 
+         arr[j+1]=current; 
             
 
     }
@@ -31,7 +31,8 @@ int main ()
         cout <<arr[i];
         cout<<endl;
 
-    }
-    cout<<endl;
+     }
+
+      cout<<endl;
 
 }
