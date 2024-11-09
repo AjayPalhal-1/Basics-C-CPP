@@ -3,69 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Diwali Celebration</title>
     <link rel="stylesheet" href="./CSS/Inline.css">
     <style>
-        #div1{ background-color: ;}
+        /* General styling */
+        body {
+            background-color: #e87885;
+            font-family: Arial, sans-serif;
+            color: #212121;
+            margin: 0;
+            padding: 0;
+        }
+       
+        h2 ,h1{
+            color: #1a35d3;
+        }
+        h3, h4 {
+            color: #320303;
+        }
+        .gallery img {
+            margin: 10px;
+            border: 2px solid #07ffa4;
+        }
+        #div1 {
+           
+        }
+        /* Sticky image */
+        .sticky-img {
+            position: sticky;
+            top: 0;
+            margin-top: 20px;
+        }
+        .Section1
+        {
+            text-decoration: #07ffa4;
+            text-align: center;
+            background-image: url(data:image/jpeg;base64,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);
+        }
     </style>
 </head>
 <body>
-    
-    <div id = "div1" style="background-color: #131314;">
-        <h1> 🪔 Din Din Din Diwali 🪔 </h1>
-        <audio autoplay loop   >
-            <source src="/FB/Projects/Imges/Din Din Diwali.mp3" type="audio/mpeg">
-            Your browser does not support the audio tag.
-        </audio>
-    </div>
-    <h2>Diwali Traditions</h2>
-<p>Diwali, also known as the Festival of Lights, is celebrated with lights, fireworks, and sweets.</p>
-<head>
-    <img src="/FB/Projects/Imges/giphy.webp" alt="Diya GIF" height=" 250" width="300">
-</head>
-<h2>Bachelors Diwali Guysss</h2>
-<p> Garib Ki Diwali......</p>
-<p> <b>Aamche Photos......</b></p>
-<img src="/FB/Projects/Imges/WhatsApp Image 2024-11-01 at 21.20.04.jpeg" alt="" height="250" width="200">
-<div style="position: sticky; top:0">
-    <img src="/FB/Projects/Imges/ecc2124116aa5a0ee1bc466c7b69dd8a.gif" alt=""height = 200 width="200">
-</div>
 
-<p> <b>Aata Aamcha Group Photo Bga ......</b></p>
-<img src="/FB/Projects/Imges/WhatsApp Image 2024-11-01 at 21.19.36.jpeg "alt="" height="250" width="300">
-<style>
-    body { background-color:  #e87885; font-family: Arial, sans-serif; color: #212121; }
-    h1 { color: #131314; }
-    h2  { color: #45eb69; } 
-    img {color: #141414;  }
-    h4{ color: #320303;  }
-    .gallery img { margin: 10px; border: 2px solid #07ffa4; }
-</style>
+    <!-- Section 1: Title and Audio -->
+    <section class="Section1">
+        <div id="div1">
+            <h1 >🪔 Din Din Din Diwali 🪔</h1>
+            <audio autoplay loop>
+                <source src="/FB/Projects/Imges/Din Din Diwali.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+    </section>
 
-<p> <b><h3> Missing Element Guyss ..</h3></b></p>
-<p> <b><h3> Chillar Partys  </h3></b></p>
-<img src="/FB/Projects/Imges/WhatsApp Image 2024-11-03 at 19.15.42.jpeg" alt="" height="300" width=" 400">
+    <!-- Section 2: Diwali Traditions -->
+    <section class="Section2">
+        <h2>Diwali Traditions</h2>
+        <p>Diwali, also known as the Festival of Lights, is celebrated with lights, fireworks, and sweets.</p>
+        <img src="/FB/Projects/Imges/giphy.webp" alt="Diya GIF" height="250" width="300">
+    </section>
 
+    <!-- Section 3: Bachelors Diwali -->
+    <section class="Section3">
+        <h2>Bachelors Diwali Guysss</h2>
+        <p>Garib Ki Diwali......</p>
+        <p><b>Aamche Photos......</b></p>
+        <img src="/FB/Projects/Imges/WhatsApp Image 2024-11-01 at 21.20.04.jpeg" alt="Photo" height="250" width="200">
 
-<p><b><h4> Rangoli tr Kahi Kadli Nahi Aammi </h4></b></p>
-<div>
-    <h1></h1>
-    
-</div>
+        <div class="sticky-img">
+            <img src="/FB/Projects/Imges/ecc2124116aa5a0ee1bc466c7b69dd8a.gif" alt="Sticky GIF" height="200" width="200">
+        </div>
+    </section>
 
-<h3 > Fatake Fodtanna Maze Mitr</h3>
+    <!-- Section 4: Group Photos -->
+    <section class="Section4">
+        <p><b>Aata Aamcha Group Photo Bga ......</b></p>
+        <img src="/FB/Projects/Imges/WhatsApp Image 2024-11-01 at 21.19.36.jpeg" alt="Group Photo" height="250" width="300">
+    </section>
 
-<head>
-    <img src="/FB/Projects/Imges/surprise-fireworks.gif" alt=""height = 200 width="200">
-</head>
+    <!-- Section 5: Friends Group and Missing Elements -->
+    <section class="Section5">
+        <h3>Missing Element Guyss ..</h3>
+        <h3>Chillar Partys</h3>
+        <img src="/FB/Projects/Imges/WhatsApp Image 2024-11-03 at 19.15.42.jpeg" alt="Friends Group Photo" height="300" width="400">
+    </section>
 
-<head>
-    <img src="/FB/Projects/Imges/deewali-happy.gif" alt=""height = 200 width="200">
-    <img src="/FB/Projects/Imges/Ajay_Palhal.jpeg" alt=""height = 200 width="200">
+    <!-- Section 6: Rangoli Message -->
+    <section class="Section6">
+        <h4>Rangoli tr Kahi Kadli Nahi Aammi</h4>
+    </section>
 
-</head>
-
-
+    <!-- Section 7: Fireworks -->
+    <section class="Section7">
+        <h3>Fatake Fodtanna Maze Mitr</h3>
+        <div class="gallery">
+            <img src="/FB/Projects/Imges/surprise-fireworks.gif" alt="Fireworks GIF" height="200" width="200">
+            <img src="/FB/Projects/Imges/deewali-happy.gif" alt="Diwali GIF" height="200" width="200">
+            <img src="/FB/Projects/Imges/Ajay_Palhal.jpeg" alt="Ajay Photo" height="200" width="200">
+        </div>
+    </section>
 
 </body>
 </html>

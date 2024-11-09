@@ -106,17 +106,31 @@ typedef struct student
 
 int main ()
 {
-    student s1("AJAY",90,99) ,s2("ANKUSH",35,98),s3("Pravin") ,s4;
+    student s1 ,s2 ;
     int mrk,r;
     char nav[50];
+
+
+
+
+    s1.setName("AJAY");
+    s1.setRollNo(99);
+    s1.setMarks(100);
+
+    s2.setName("Palhal");
+    s2.setRollNo(99);
+    s2.setMarks(100);
+
+
+
+
 
 
     
 // Outputs
 
-    printf("\n\n:: Output Using Getter For S1 ::\n\n");
 
-    printf("Student Name : %s",s1.getName());
+    printf(" S1 Data \n\nStudent Name : %s",s1.getName());
     printf("\nStudent Marks : %d",s1.getmarks());
     printf("\nStudent Roll Number : %d\n\n\n\n",s1.getRollNo());
 
@@ -125,25 +139,6 @@ int main ()
     s1.disp(s1);
 
 
-    printf("\n\n::** Output Using Getter For S2 ::**\n\n");
-
-    printf("Student Name : %s",s2.getName());
-    printf("\nStudent Marks : %d",s2.getmarks());
-    printf("\nStudent Roll Number : %d\n\n\n\n",s2.getRollNo());
-
-
-    printf(": Displays Behaviour After Setting values Of S2 :\n");
-    s2.disp(s2);
-
-
-    printf("\n\n:: Output Using Getter For S3 ::\n\n");
-
-    printf("Student Name : %s",s3.getName());
     
-    printf(":** Displays Behaviour After Setting values Of S3 :**\n");
-    s3.disp(s3);
-
-    s4.disp(s4);
-
     return 1;
 }
