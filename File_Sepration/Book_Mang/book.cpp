@@ -1,13 +1,13 @@
 
 
 #include"book.h"
-#include<string.h>
 
 
-using namespace std;
+ namespace book1
+ {
 
 
-    Book()
+  Book ::  Book()
     {
         strcpy(title,"NOT_GVEN");
         isbnno=0;
@@ -15,7 +15,7 @@ using namespace std;
         pbyear=0;
     }
 
-    Book(char* title , int isbn , char* name , int pyear)
+    Book::Book(char* title , int isbn , char* name , int pyear)
     {
         strcpy(this->author,name);
         this->isbnno=isbn;
@@ -24,11 +24,12 @@ using namespace std;
 
     }
 
-    void DisplayInfo()
+    void Book::DisplayInfo()
     {
         cout<<"Book Title            : "<<this->title<<endl;
         cout<<"Book ISBN No.         : "<<this->isbnno<<endl;
         cout<<"Book Publication Year : "<<this->pbyear<<endl;
         cout<<"Author Name           : "<<this->author<<endl<<endl<<endl;
     }
+ }
 

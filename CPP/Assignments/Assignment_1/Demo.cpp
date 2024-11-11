@@ -119,7 +119,16 @@ int main ()
 
     s2.setName("Palhal");
     s2.setRollNo(99);
-    s2.setMarks(100);
+    s2.setMarks(00);
+        printf("\n\n\n");
+
+
+    printf("S1 Marks : %d",s1.getmarks());
+    printf("\n\n\n");
+
+
+    printf(" S2 Marks : %d",s2.getmarks());
+    printf("\n\n\n");
 
 
 
@@ -130,13 +139,13 @@ int main ()
 // Outputs
 
 
-    printf(" S1 Data \n\nStudent Name : %s",s1.getName());
-    printf("\nStudent Marks : %d",s1.getmarks());
-    printf("\nStudent Roll Number : %d\n\n\n\n",s1.getRollNo());
+    // printf(" S1 Data \n\nStudent Name : %s",s1.getName());
+    // printf("\nStudent Marks : %d",s1.getmarks());
+    // printf("\nStudent Roll Number : %d\n\n\n\n",s1.getRollNo());
 
-    printf("\n\n");
-    printf(":** Displays Behaviour After Setting values Of S1 :**\n");
-    s1.disp(s1);
+    // printf("\n\n");
+    // printf(":** Displays Behaviour After Setting values Of S1 :**\n");
+    // s1.disp(s1);
 
 
     
