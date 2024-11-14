@@ -12,10 +12,14 @@ if(age>120 || age<18)
 
     try
     {
-        if(age>120)
+        if(age>120  && age<=500)
         {
             string s= "Aap es Dhara se Nahi ho  ";
             throw s ;
+        }
+        else if(age>500)
+        {
+            cout<<"Ashwathama Ho Tum";
         }
         else if(age<18)
         {

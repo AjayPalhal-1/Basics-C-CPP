@@ -1,8 +1,16 @@
 #include <iostream>
 using namespace std;
 
+// * 
+// * * 
+// * * * 
+// * * * * 
+// * * * * * 
+// * * * * 
+// * * * 
+// * * 
+// *
 int main() {
-    // Upper part of the pattern (Hollow triangle)
     for (int i = 1; i <=5; i++)
      { 
         
