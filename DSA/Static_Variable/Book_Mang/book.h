@@ -9,16 +9,16 @@ namespace book1
 
   class Book
  {
-    char title[20];
+    char title[20];  // Non Static Variable 
     int isbnno;
     char author[20];
     int pbyear;
 
-    static char labname[20];
+    static char labname[20];  // Static Variable 
 
     public:
     Book();    
-    Book(char* title , int isbn , char* name , int pyear);
+    Book(const char* title , int isbn ,const  char* name , int pyear);
     void DisplayInfo(); 
     static void labDisplay();
    

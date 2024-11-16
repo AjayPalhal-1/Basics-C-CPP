@@ -8,7 +8,7 @@
     
 
 
-  Book ::  Book()
+  Book::Book()  // DC
     {
         strcpy(title,"NOT_GVEN");
         isbnno=0;
@@ -18,7 +18,7 @@
 
 
 
-    Book::Book(char* title , int isbn , char* name , int pyear)
+    Book::Book(const char* title , int isbn , const char* name , int pyear) // PC
     {
         strcpy(this->author,name);
         this->isbnno=isbn;
@@ -32,14 +32,14 @@
         cout<<"Book Title            : "<<this->title<<endl;
         cout<<"Book ISBN No.         : "<<this->isbnno<<endl;
         cout<<"Book Publication Year : "<<this->pbyear<<endl;
-        cout<<"Author Name           : "<<this->author<<endl<<endl<<endl;
+        cout<<"Author Name           : "<<this->author<<endl<<endl;
     }
 
-     char labname[20]="CLG_LABRARY";
+     char labname[20]="CLG_LABRARY";  // Static Variable Assigned in .cpp File 
 
-     void  Book::labDisplay()
+        void  book1::Book::labDisplay()
     {
-        cout<< "Lab> Name : "<<labname;
+        cout<< "Lab Name : "<<book1::labname<<endl<<endl;
     }
  }
 
