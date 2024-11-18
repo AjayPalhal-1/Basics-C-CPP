@@ -7,9 +7,9 @@ void merge (int* ,int   , int  ,int   );
 
 int main ()
 {
-    int size =3;
+    int size =5;
 
-    int arr [size]={25,12,85};
+    int arr [size]={25,12,85,4,99};
     int start= 0;
     int end =size-1;
 
@@ -41,7 +41,7 @@ void divide(int* arr , int  start , int  end)
     {
         int merged [(end-start )+1];
 
-        int i= start ;
+        int i= start ; // TO ADD 
         int j = mid +1;
         int k =0 ;
 
