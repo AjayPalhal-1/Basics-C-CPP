@@ -4,7 +4,7 @@ int main()
 {
 
     int val, size, ele, idx;
-    cout << "\nEnter the Size of the Array : ";
+    cout << "Enter the Size of the Array : "<<endl;
     cin >> size;
     MyArray arr(size);
 
@@ -16,22 +16,24 @@ int main()
         // bool isFull();
         // bool isEmpty();
         // // void display();
-        cout << "\n1: Insert Element in array " << endl;
-        cout << "2: Remove elemnt  " << endl;
-        cout << "3: Diaplay array " << endl;
-        cout << "0: toExit" << endl;
-        cout << "Enter Your Choice";
+
+        cout <<"Enter Your Choice"<<endl<<endl;
+
+        cout << " 1   : Insert Element in array " << endl;
+        cout << " 2   : Remove elemnt  " << endl;
+        cout << " 3   : Diaplay array " << endl;
+        cout << " 10  : toExit" << endl;
         cin >> ch;
         switch (ch)
         {
         case 1:
-            cout << "\nEnter Element to isert in array : ";
+            cout <<"Enter Element to isert in array : "<<endl;
             cin >> ele;
             arr.insert(ele);
             break;
 
         case 2:
-            cout << "\nEnter the index of element you want to delete : ";
+            cout <<"Enter the index of element you want to delete : "<<endl;
             cin >> idx;
             arr.remove(idx);
             break;
