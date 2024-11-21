@@ -7,6 +7,7 @@ namespace SY
 {
     class SYMARKS
     {
+        public:
         int compTotal;
         int entcTotal;
         int mathTotal;
