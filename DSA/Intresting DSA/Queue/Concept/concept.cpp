@@ -36,7 +36,7 @@ bool CQ::isFull()
 
 void  CQ::Insert(int ele)
 {
-    if(isFull)
+    if(isFull())
     {
         cout<<"\nYou can't Add Element\n";
     }
@@ -90,10 +90,25 @@ void CQ::Display()
     {
         cout<<"\n You can't Disply Element \n";
     }
-    else {
+    else
+     {
 
         int i=front ;
-        while()
+        while(i !=rear)
+        {
+           cout<<" "<<ptr[i];
+            if(i==size-1)
+            {
+                 i=0;
+            }
+            else
+            {
+                  i++;
+            }
+            cout<<" "<<ptr[i];
+           
+
+        }
     }
 
 }

@@ -34,5 +34,7 @@
         cout<<"Book ID     : "<<this->bId<<endl;
         cout<<"Book Name   : "<<this->bname<<endl;
         cout<<"Book Price  : "<<this->price<<endl<<endl;
+        cout<<" Object Count : "<<this->count<<endl<<endl;
+
 
      }

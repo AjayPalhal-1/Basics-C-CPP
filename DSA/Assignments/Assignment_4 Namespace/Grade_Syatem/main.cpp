@@ -113,7 +113,7 @@ void calGrade(SY::SYMARKS& sy,TY::TYMARKS& ty  , Student s)
 
 int main()
 {
-    Student S1(99,"AJAY_PALHAL_");
+    Student S1(99,"AJAY_PALHAL");
 
     SY::SYMARKS sy(20,50,50);
     TY::TYMARKS ty(100,100);
