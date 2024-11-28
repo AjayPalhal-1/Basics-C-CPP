@@ -20,8 +20,15 @@ Node* linkedlist::getStart()
 
 void  linkedlist::Display()
 {
-    cout<<this->getStart()<<endl;
+     if(start==NULL)
+     {
+        cout<<"\nLinkedList Is Empty\n";
+        return;
+     }
 
+     Node* temp= start ;
+     cout<<"Data : "<<temp->getData();
+     temp=temp->getNext();
 }
 
 void linkedlist::insertAtBegin(int ele)
@@ -31,3 +38,13 @@ void linkedlist::insertAtBegin(int ele)
     start=temp;
 
 }
+
+    void lineklist::insertAtEnd(int ele)
+    {
+        Node* temp = new Node(ele);
+        if(start==NULL)
+        {
+            
+        }
+
+    }

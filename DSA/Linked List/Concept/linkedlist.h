@@ -10,9 +10,10 @@ class linkedlist
 
     linkedlist();
 
-    void setStart(Node * start);
+    void setStart(Node * );
     Node* getStart();
 
     void Display();
-    void insertAtBegin(int ele);
+    void insertAtBegin(int );
+    void insertAtEnd(int );
 };
