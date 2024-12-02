@@ -16,4 +16,8 @@ class linkedlist
     void Display();
     void insertAtBegin(int );
     void insertAtEnd(int );
+    void insertAtPosition(int , int);
+    void deleteAtBegin();
+    void deleteAtEnd();
+    void deleteAtPosition(int);
 };

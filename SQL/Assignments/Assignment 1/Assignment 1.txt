@@ -1,0 +1,28 @@
+Assignment_1
+
+
+
+
+Q1 .
+
+
+Code : 
+
+mysql> show databases;
++-----------------------+
+| Database              |
++-----------------------+
+| 1st_Database          |
+| JobApplicationTracker |
+| demo                  |
+| emp                   |
+| information_schema    |
+| job_tracker           |
+| my_database           |
+| mysql                 |
+| performance_schema    |
+| sys                   |
++-----------------------+
+10 rows in set (0.00 sec)
+
+mysql> 
