@@ -6,6 +6,7 @@ class linkedlist
 private:
      Node* last;
 public:
+
     linkedlist();
     linkedlist( Node*);
 
@@ -14,6 +15,7 @@ public:
 
 
     void insertAtBegin(int );
+    void insertAtEnd(int);
     void Display();
 };
 

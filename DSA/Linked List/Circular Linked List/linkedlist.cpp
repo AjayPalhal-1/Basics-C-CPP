@@ -33,7 +33,21 @@ void linkedlist::insertAtBegin(int ele)
 
 }
 
+void linkedlist::insertAtEnd(int ele)
+{
+    Node* temp = new Node(ele);
+
+    if(last==NULL)
+    {
+        cout<<"List is Empty !!  You Failed As User ";
+        return;
+    }
+    
+
+}
+
 void linkedlist::Display()
 {
     cout<<"  "<< last->getData()<<endl;
+
 }
