@@ -19,7 +19,7 @@ int main ()
 
     student s1, s2,s3 ;
      store (&s1);
-    display (&s1);
+     display (&s1);
 }
 
  void store (student * s)

@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
 
+// Step 1: Iterate through each element (outer loop).
+// Step 2: Find the minimum element in the unsorted portion (inner loop).
+// Step 3: Swap the minimum with the current element.
+
+
 
 int main()
 {
@@ -26,6 +31,7 @@ int main()
                 arr[i]= arr[idx];
                 arr[idx]= temp;
 
+        
         
     }
     

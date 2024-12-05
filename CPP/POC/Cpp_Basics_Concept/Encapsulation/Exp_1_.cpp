@@ -6,7 +6,7 @@ struct student
     int marks;
     char name[10];
 
-    void setRollNo(int mrk)//behaviour
+    void setRollNo(int mrk)   //behaviour
     {
         this->marks=mrk;
         printf("Sucess fully done meri jann\n\n");
