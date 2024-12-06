@@ -43,3 +43,48 @@ mysql>
 
 
 Q3)
+
+mysql> desc job;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| job_id    | int         | NO   | PRI | NULL    |       |
+| job_title | varchar(20) | NO   |     | NULL    |       |
+| min_sal   | int         | YES  |     | NULL    |       |
+| max_sal   | int         | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> 
+
+
+
+Q4) 
+
+mysql> desc job_histry;
++-----------+------+------+-----+---------+-------+
+| Field     | Type | Null | Key | Default | Extra |
++-----------+------+------+-----+---------+-------+
+| emp_id    | int  | NO   | PRI | NULL    |       |
+| join_date | date | YES  |     | NULL    |       |
+| end_date  | date | YES  |     | NULL    |       |
+| dept_id   | int  | YES  |     | NULL    |       |
++-----------+------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> 
+
+
+Q5 )
+
+mysql> desc countries;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| Cid      | int         | YES  | UNI | NULL    |       |
+| CName    | varchar(10) | YES  |     | NULL    |       |
+| RegionId | int         | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> 
