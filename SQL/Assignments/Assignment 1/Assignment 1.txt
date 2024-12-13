@@ -3,7 +3,7 @@ Assignment_1
 
 
 
-Q1 .
+Q1) .
 
 
 Code : 
@@ -86,5 +86,53 @@ mysql> desc countries;
 | RegionId | int         | YES  |     | NULL    |       |
 +----------+-------------+------+-----+---------+-------+
 3 rows in set (0.01 sec)
+
+mysql> 
+
+
+Q6)
+mysql> desc jobs;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| job_id    | int         | YES  |     | NULL    |       |
+| job_title | varchar(20) | YES  |     |         |       |
+| min_sal   | int         | YES  |     | 8000    |       |
+| max_sal   | int         | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+Q7) 
+
+mysql> desc department;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| dept_id     | decimal(4,0) | NO   | PRI | 0       |       |
+| dept_nmae   | varchar(30)  | NO   |     | NULL    |       |
+| mang_id     | decimal(6,0) | NO   | PRI | 0       |       |
+| location_id | decimal(4,0) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+Q8)
+
+mysql> desc emp;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| empId     | int          | NO   | PRI | NULL    |       |
+| fname     | varchar(20)  | YES  |     | NULL    |       |
+| lname     | varchar(20)  | YES  |     | NULL    |       |
+| email     | varchar(50)  | YES  |     | NULL    |       |
+| phone_no  | bigint       | YES  |     | NULL    |       |
+| DOJ       | date         | YES  |     | NULL    |       |
+| salary    | int          | YES  |     | NULL    |       |
+| commision | int          | YES  |     | NULL    |       |
+| mang_id   | decimal(6,0) | YES  |     | NULL    |       |
+| dept_id   | decimal(4,0) | YES  | MUL | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+10 rows in set (0.00 sec)
 
 mysql> 

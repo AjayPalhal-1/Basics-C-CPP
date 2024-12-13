@@ -1,0 +1,123 @@
+
+
+### **Q1: View All Databases**
+- **Required Query:**
+  ```sql
+  SHOW DATABASES;
+  ```
+- Purpose of Query:
+  To display all the databases that are currently present in the MySQL server.
+
+---
+
+Q2: Create a Simple Table `countries`
+- Required Query:
+  ```sql
+  CREATE TABLE countries (
+      country_id INT,
+      country_name VARCHAR(50),
+      region_id INT
+  );
+  DESCRIBE countries;
+  ```
+- Purpose of Query: 
+  To create the `countries` table with columns `country_id`, `country_name`, and `region_id` and then display its structure.
+
+---
+Q3: Create a Table `jobs` with Constraints
+- Required Query:
+  ```sql
+  CREATE TABLE jobs (
+      job_id INT PRIMARY KEY,
+      job_title VARCHAR(50) NOT NULL,
+      min_salary INT,
+      max_salary INT CHECK (max_salary <= 25000)
+  );
+  ```
+- Purpose of Query: 
+  To create the `jobs` table with columns `job_id`, `job_title`, `min_salary`, and `max_salary` and ensure that `max_salary` does not exceed 25000. Additionally, `job_title` cannot be NULL.
+
+---
+
+Q4: Create a Table `job_histry`
+- Required Query:
+  ```sql
+  CREATE TABLE job_histry (
+      employee_id INT,
+      start_date DATE,
+      end_date DATE,
+      job_id INT,
+      department_id INT
+  );
+  ```
+- Purpose of Query:
+  To create the `job_histry` table with columns `employee_id`, `start_date`, `end_date`, `job_id`, and `department_id`.
+
+---
+
+### **Q5: Alter Table `countries` to Prevent Duplicate `country_id`**
+- **Required Query:**
+  ```sql
+  ALTER TABLE countries ADD UNIQUE (country_id);
+  ```
+- **Purpose of Query:**  
+  To add a unique constraint on the `country_id` column in the `countries` table to prevent duplicate entries.
+
+---
+
+### **Q6: Create Table `jobs` with Default Values**
+- **Required Query:**
+  ```sql
+  CREATE TABLE jobs (
+      job_id INT,
+      job_title VARCHAR(50) DEFAULT '',
+      min_salary INT DEFAULT 8000,
+      max_salary INT DEFAULT NULL
+  );
+  ```
+- **Purpose of Query:**  
+  To create the `jobs` table with default values for `job_title`, `min_salary`, and `max_salary` in case no values are provided during insertion.
+
+---
+
+### **Q7: Create Table `department`**
+- **Required Query:**
+  ```sql
+  CREATE TABLE department (
+      dept_id INT PRIMARY KEY,
+      dept_name VARCHAR(50),
+      manager_id INT,
+      location_id INT
+  );
+  ```
+- **Purpose of Query:**  
+  To create the `department` table with columns `dept_id`, `dept_name`, `manager_id`, and `location_id`.
+
+---
+
+### **Q8: Create Table `employees` with Foreign Key Constraints**
+- **Required Query:**
+  ```sql
+  CREATE TABLE employees (
+      employee_id INT PRIMARY KEY,
+      first_name VARCHAR(50),
+      last_name VARCHAR(50),
+      email VARCHAR(50),
+      phone_number VARCHAR(15),
+      hire_date DATE,
+      job_id INT,
+      salary DECIMAL(10, 2),
+      commission DECIMAL(10, 2),
+      manager_id INT,
+      department_id INT,
+      FOREIGN KEY (department_id) REFERENCES department(dept_id),
+      FOREIGN KEY (manager_id) REFERENCES department(manager_id),
+      UNIQUE (employee_id)
+  );
+  ```
+- **Purpose of Query:**  
+  To create the `employees` table with various columns and enforce foreign key constraints on `department_id` and `manager_id` that reference the `department` table, while ensuring no duplicate entries in the `employee_id` column.
+
+---
+
+These queries are designed to accomplish each task described in your assignment, ensuring that the appropriate constraints and structures are applied.
