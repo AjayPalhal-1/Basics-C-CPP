@@ -178,7 +178,7 @@
         <p>Joining Janai Social Service gives you an opportunity to make a difference in the lives of people in need.</p>
     </details>
 
-    <footer>
+    <footer>                        
         <!-- The <footer> tag defines footer content -->
         <p>&copy; 2024 Janai Social Service. All Rights Reserved.</p> <!-- Copyright notice -->
         <p>Contact us: <a href="mailto:help@janaisocialservice.org">help@janaisocialservice.org</a></p> <!-- Contact information -->
@@ -201,6 +201,31 @@
         <!-- The <mark> tag highlights text -->
         Note: Be sure to sign up for the food drive early to reserve your spot!
     </mark>
+    <p id="greeting"></p>
+
+
+
+    <script>
+        function displayGreeting() {
+            const greetingElement = document.getElementById("greeting");
+            const currentHour = new Date().getHours();
+            let message = "";
+    
+            if (currentHour < 12) {
+                message = "Good Morning!";
+            } else if (currentHour < 18) {
+                message = "Good Afternoon!";
+            } else {
+                message = "Good Evening!";
+            }
+    
+            greetingElement.textContent = message;
+        }
+    
+        // Run the function when the page loads
+        window.onload = displayGreeting;
+    </script>
+    
 
 </body>
 </html>
