@@ -125,6 +125,8 @@
     </header>
 
     <nav>
+        <p id="dateTime" style="text-align: center; font-size: 1.2em; margin-top: 1em;"></p>
+
         <!-- The <nav> tag defines a set of navigation links -->
         <ul>
             <li><a href="#home">Home</a></li> <!-- Navigation link to the Home section -->
@@ -205,6 +207,7 @@
 
 
 
+
     <script>
         function displayGreeting() {
             const greetingElement = document.getElementById("greeting");
@@ -224,7 +227,26 @@
     
         // Run the function when the page loads
         window.onload = displayGreeting;
-    </script>
+
+
+    function updateDateTime() {
+        const dateTimeElement = document.getElementById("dateTime");
+        const now = new Date();
+        const options = { 
+            weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
+        };
+        const formattedDate = now.toLocaleDateString(undefined, options);
+        const formattedTime = now.toLocaleTimeString();
+
+        dateTimeElement.textContent = `Today is ${formattedDate}, Current Time: ${formattedTime}`;
+    }
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+    // Initialize on page load
+    window.onload = updateDateTime;
+</script>
+
     
 
 </body>
